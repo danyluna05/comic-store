@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Daniela",
+    "lastname": "Garcia",
+    "email": "dga@gmail.com",
+    "username" :"dany123",
+    "pass": "dany123",
+    "profile":"admin"  
+  },
+   {
+    "name": "Alejandro",
+    "lastname": "Zapata",
+    "email": "alejo@gmail.com",
+    "username" :"ale123",
+    "pass": "alej123",
+    "profile":"user" 
+   }  
+]

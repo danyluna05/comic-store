@@ -1,0 +1,25 @@
+<div class="row">
+	<div class="col-sm-4 col-lg-4 col-md-4"
+		ng-repeat="comic in comics | filter:sort" ng-show="!isOpen">
+		<div class="thumbnail">
+			<img src="{{comic.image}}" alt="">
+			<div class="caption">
+				<h4 class="pull-right">{{comic.price | currency}}</h4>
+				<h4>
+					<a href="#" class="letter-titule" ng-click="openComic(comic)">{{comic.name}}</a>
+				</h4>
+				<h6>
+					<b>created by:</b> {{comic.author}}
+				</h6>
+				<p>{{comic.description}}</p>
+			</div>
+			<div class="ratings">
+				<p class="pull-right">{{comic.reviews.length}} reviews</p>
+				<p>
+					<span data-ng-repeat="i in [1,2,3,4,5] | limitTo:comic.qualification"
+						class="glyphicon glyphicon-star"></span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

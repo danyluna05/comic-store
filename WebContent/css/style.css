@@ -1,0 +1,162 @@
+.userLogin {
+	margin-top: 90px;
+}
+
+.font-comics {
+	background: url(comics.jpg);
+	background-size: 300px 315px;
+	background-repeat: repeat;
+}
+
+.weight-container {
+	height: 600px;
+}
+
+.footer-c {
+	height: 100px;
+	background-color: #D8D8D8;
+}
+
+.header {
+	background-color: #f07f3f;
+}
+
+a {
+	color: white !important;
+	text-decoration: none;
+}
+
+.sideb {
+	background-color: black;
+}
+
+.nav>li>a:hover, .nav>li>a:focus {
+	text-decoration: none;
+	background-color: #f07f3f !important;
+}
+
+.navbar-nav>li>.dropdown-menu {
+	background-color: gray !important;
+}
+
+.navbar-nav>li>a:hover, .navbar-nav>li>a:focus, .navbar-nav>li>a:active
+	{
+	background-color: black !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus, .dropdown-menu>li>a:active
+	{
+	background-color: #f07f3f !important;
+}
+
+.comic-page {
+	margin-left: 50px;
+}
+
+.letter-titule {
+	color: gray !important;
+}
+
+.detailBox {
+	width: 710px;
+	border: 1px solid #bbb;
+	margin: 20px;
+}
+
+.titleBox {
+	background-color: black;
+	padding: 10px;
+	color: white !important;
+}
+
+.titleBox label {
+	color: #444;
+	margin: 0;
+	display: inline-block;
+}
+
+.commentBox {
+	padding: 10px;
+	border-top: 1px dotted #bbb;
+}
+
+.commentBox .form-group:first-child, .actionBox .form-group:first-child
+	{
+	width: 80%;
+}
+
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2)
+	{
+	width: 18%;
+}
+
+.actionBox .form-group * {
+	width: 100%;
+}
+
+.taskDescription {
+	margin-top: 10px 0;
+}
+
+.commentList {
+	padding: 0;
+	list-style: none;
+	max-height: 200px;
+	overflow: auto;
+}
+
+.commentList li {
+	margin: 0;
+	margin-top: 10px;
+}
+
+.commentList li>div {
+	display: table-cell;
+}
+
+.commenterImage {
+	width: 30px;
+	margin-right: 5px;
+	height: 100%;
+	float: left;
+}
+
+.commenterImage img {
+	width: 100%;
+	border-radius: 50%;
+}
+
+.commentText p {
+	margin: 0;
+}
+
+.sub-text {
+	color: #aaa;
+	font-family: verdana;
+	font-size: 11px;
+}
+
+.actionBox {
+	border-top: 1px dotted #bbb;
+	padding: 10px;
+}
+
+.comments-area {
+	width: 550px !important;
+}
+
+.modal-header {
+	background-color: black !important;
+	color: white !important;
+}
+
+.center {
+	margin: auto;
+	margin-left: 600px;
+	padding: 10px;
+}
+
+.form-horizontal .form-group {
+	margin-right: 3px !important;
+	margin-left: 3px !important;
+}

@@ -1,0 +1,1 @@
+var app = angular.module('comicStore', ['store-directives','ngResource','ngStorage']);

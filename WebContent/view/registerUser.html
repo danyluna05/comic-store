@@ -1,0 +1,75 @@
+
+<div class="row" ng-show="isOption(2)">
+	
+	<div class="col-md-7 col-md-offset-5">
+		<div class="panel panel-default userLogin" >
+			<div class="panel-heading">
+				<strong class="">Register user</strong>
+
+			</div>
+			<div class="panel-body">
+			    <message-div></message-div>
+				<form class="form-horizontal" role="form" name="formRegister">
+					<div class="form-group">
+						<label for="inputName" class="col-sm-3 control-label">Name</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control" id="inputName" name="name"
+								placeholder="Name" ng-model="newUser.name" ng-pattern="/^[A-Za-z]+$/" required>
+							<span style="color: red" ng-show="formRegister.name.$error.pattern">Not a valid field!</span>
+                            <span style="color: red" ng-show="formRegister.name.$error.required">This field is required!</span>
+                        </div>
+					</div>
+					<div class="form-group">
+						<label for="inputLastName" class="col-sm-3 control-label">Last name</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control"  id="inputLastName" name="lastName"
+							   placeholder="Lastname" ng-model="newUser.lastname" ng-pattern="/^[A-Za-z]+$/">
+							<span style="color: red" ng-show="formRegister.lastName.$error.pattern">Not a valid field!</span>
+                        </div>
+					</div>
+					<div class="form-group">
+						<label for="inputEmail" class="col-sm-3 control-label">Email</label>
+						<div class="col-sm-9">
+							<input type="email" class="form-control"  id="inputEmail" name="email"
+								placeholder="email" ng-model="newUser.email" required>
+							<span style="color: red" ng-show="formRegister.email.$error.required">This field is required!</span>
+                            <span style="color: red" ng-show="formRegister.email.$error.email">Not a valid field email!</span>
+                        </div>
+					</div>
+					<div class="form-group">
+						<label for="inputUserName" class="col-sm-3 control-label">Username</label>
+						<div class="col-sm-9">
+							<input type="text" class="form-control"  id="inputUserName" name="username"
+								placeholder="Username" ng-model="newUser.username" required>
+							<span style="color: red" ng-show="formRegister.username.$error.pattern">Not a valid field!</span>
+                            <span style="color: red" ng-show='newUser.username.length>7'>exceeds the number of characters allowed!</span>
+                            <span style="color: red" ng-show="formRegister.username.$error.required">This field is required!</span>
+                        </div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword" class="col-sm-3 control-label">Password</label>
+						<div class="col-sm-9">
+							<input type="password" class="form-control"  id="inputPassword" name="password"
+								placeholder="Password" ng-model="newUser.pass" required>
+							<span style="color: red" ng-show="formRegister.password.$error.pattern">Not a valid field!</span>
+                            <span style="color: red" ng-show='newUser.pass.length<7'>minimum 7 characters!</span>
+                            <span style="color: red" ng-show="formRegister.password.$error.required">This field is required!</span>
+                            
+						</div>
+					</div>
+					<div class="form-group last">
+						<div class="col-sm-offset-3 col-sm-9">
+							<button type="submit" class="btn btn-success btn-sm"
+							    ng-disabled="formRegister.name.$error.pattern || formRegister.name.$error.required || formRegister.lastName.$error.pattern || formRegister.email.$error.required || formRegister.email.$error.email ||formRegister.username.$error.pattern || newUser.username.length>7 || formRegister.username.$error.required || formRegister.password.$error.pattern || newUser.pass.length<7 || formRegister.password.$error.required"
+								ng-click="register()">Register</button>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+			<div class="panel-footer">
+				 <a href="#" class="" ng-click="setOption(1)">Login</a>
+			</div>
+		</div>
+	</div>
+</div>

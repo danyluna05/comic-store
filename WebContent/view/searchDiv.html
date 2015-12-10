@@ -1,0 +1,51 @@
+<div>
+	<div class="input-group" id="adv-search" style="width: 250px;" ng-show="!isOpen">
+		<input type="text" class="form-control" placeholder="Search"
+			ng-model="searchKeyword" />
+		<div class="input-group-btn">
+			<div class="btn-group" role="group">
+				<div class="dropdown dropdown-lg">
+					<button type="button" class="btn btn-default dropdown-toggle"
+						data-toggle="dropdown" aria-expanded="false">
+						<span class="caret"></span>
+					</button>
+					<button type="button" class="btn btn-default">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					</button>
+					<div class="dropdown-menu dropdown-menu-right" role="menu"
+						style="width: 250px;">
+						<form class="form-horizontal" role="form">
+							<div class="form-group">
+								<strong>Filter by</strong> <br />
+								<br /> <label for="filter">stars</label> <select
+									class="form-control" ng-model="sort.qualification"
+									ng-options="s as s for s in stars">
+								</select>
+
+							</div>
+							<div class="form-group">
+								<label for="contain">Name</label>
+								<input class="form-control" type="text" ng-model="sort.name" />
+							</div>
+							<div class="form-group">
+								<label for="contain">Author</label>
+							    <input class="form-control" type="text" ng-model="sort.author"/>
+							</div>
+							<div class="form-group">
+							   <label>gender</label>
+							   <select class="form-control" ng-model="sort.gender">
+									<option value="fantasy" selected>fantasy</option>
+									<option value="super heroe">super heroe</option>
+									<option value="science fiction">science fiction</option>
+								</select>
+							</div>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+

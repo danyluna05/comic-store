@@ -1,0 +1,41 @@
+    <div class="row" ng-show="!isLoggin && isOption(1)">
+        <div class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default userLogin" >
+                <div class="panel-heading"> <strong class="">Login</strong>
+                </div>
+                <div class="panel-body">
+                    <message-div></message-div>
+                    <form novalidate class="form-horizontal" role="form" name="formLogin">
+                        <div class="form-group">
+                            <label for="inputEmail3" class="col-sm-3 control-label">Username</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="username" class="form-control" id="inputEmail3" placeholder="Username" ng-model="user.username"  ng-pattern="/^[A-Za-z0-9]+$/" required>
+                                <span style="color: red" ng-show="formLogin.username.$error.pattern">Not a valid field!</span>
+                                <span style="color: red" ng-show='user.username.length>7'>exceeds the number of characters allowed!</span>
+                                <span style="color: red" ng-show="formLogin.username.$error.required">This field is required!</span>
+                           
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" name="password" id="inputPassword3" placeholder="Password"  ng-model="user.pass" ng-pattern="/^[A-Za-z0-9]+$/" required>
+                                <span style="color: red" ng-show="formLogin.password.$error.pattern">Not a valid field!</span>
+                                <span style="color: red" ng-show='user.pass.length<7'>minimum 7 characters!</span>
+                                <span style="color: red" ng-show="formLogin.password.$error.required">This field is required!</span>
+                            </div>
+                        </div>
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-success btn-sm"
+                                ng-disabled="formLogin.username.$error.pattern || formLogin.username.$error.required ||  user.username.length>7 || formLogin.password.$error.pattern || user.pass.length<7 || formLogin.password.$error.required" 
+                                ng-click="signIn()">Sign in</button>
+                            </div>
+                        </div>                       
+                    </form>
+                </div>
+                <div class="panel-footer">Not Registered? <a href="#" class="" ng-click="setOption(2)">Register here</a>
+                </div>
+            </div>
+        </div>
+    </div>
